@@ -20,6 +20,7 @@ void loop(){
   arduboy.clear();
   // arduboy.drawRect(int16_t x, int16_t y, uint8_t w, uint8_t h, uint8_t color)
   arduboy.drawRect(x, y, 10, 10, 1);
+  // Flip direction
   if(x > 100){
     dx = dx * -1;
   }
@@ -27,7 +28,8 @@ void loop(){
     dx = dx * -1;
 
   }
+  // Actually move to new direction
   x += dx;
-
+  // Show the box
   arduboy.display();
 }
